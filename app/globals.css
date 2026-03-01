@@ -1,0 +1,327 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* ===== Dark Theme Overrides ===== */
+:root {
+  color-scheme: dark;
+  --vd-background: #0b0b0d;
+  --vd-card: #111114;
+  --vd-border: #1f1f23;
+  --vd-muted: #a1a1aa;
+  --vd-red: #e11d2e;
+  --vd-red-hover: #f42c3e;
+  --bs-body-bg: var(--vd-background);
+  --bs-body-color: #f4f4f5;
+  --bs-border-color: var(--vd-border);
+}
+
+[data-bs-theme="dark"],
+html {
+  --bs-body-bg: var(--vd-background);
+  --bs-body-color: #f4f4f5;
+}
+
+body {
+  background-color: var(--vd-background);
+  color: #f4f4f5;
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", "SF Pro Display", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Custom Utility Classes ===== */
+.bg-vd-background {
+  background-color: var(--vd-background) !important;
+}
+
+.bg-vd-card {
+  background-color: var(--vd-card) !important;
+}
+
+.border-vd-border {
+  border-color: var(--vd-border) !important;
+}
+
+.text-vd-muted {
+  color: var(--vd-muted) !important;
+}
+
+.bg-vd-red {
+  background-color: var(--vd-red) !important;
+}
+
+.text-vd-red {
+  color: var(--vd-red) !important;
+}
+
+.bg-vd-red-hover:hover {
+  background-color: var(--vd-red-hover) !important;
+}
+
+/* ===== Shadow ===== */
+.shadow-soft {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== Animations ===== */
+@keyframes floaty {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+/* ===== Scrollbar Hide ===== */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== Custom Color Utils ===== */
+.text-zinc-100 {
+  color: #f4f4f5 !important;
+}
+
+.text-zinc-200 {
+  color: #e4e4e7 !important;
+}
+
+.text-zinc-300 {
+  color: #d4d4d8 !important;
+}
+
+.text-zinc-500 {
+  color: #71717a !important;
+}
+
+.bg-zinc-900 {
+  background-color: #18181b !important;
+}
+
+.bg-black-40 {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.bg-black-50 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.bg-black-60 {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.bg-black-70 {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* ===== Typography Utils ===== */
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.25em;
+}
+
+.text-2xs {
+  font-size: 0.6875rem;
+  /* 11px */
+}
+
+.fs-xs {
+  font-size: 0.75rem;
+  /* 12px */
+}
+
+.fs-sm {
+  font-size: 0.875rem;
+  /* 14px */
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+/* ===== Layout Utils ===== */
+.max-w-6xl {
+  max-width: 1400px;
+}
+
+.max-w-xl {
+  max-width: 576px;
+}
+
+.max-w-2xl {
+  max-width: 672px;
+}
+
+.max-w-md {
+  max-width: 448px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* ===== Rounded Utils (Beyond Bootstrap) ===== */
+.rounded-2xl {
+  border-radius: 1rem !important;
+}
+
+.rounded-pill-custom {
+  border-radius: 9999px !important;
+}
+
+/* ===== Gap & Spacing Helpers ===== */
+.gap-6 {
+  gap: 1.5rem !important;
+}
+
+.gap-8 {
+  gap: 2rem !important;
+}
+
+.gap-10 {
+  gap: 2.5rem !important;
+}
+
+.gap-20 {
+  gap: 5rem !important;
+}
+
+.gap-24 {
+  gap: 6rem !important;
+}
+
+/* ===== Backdrop ===== */
+.backdrop-blur {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-sm {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+/* ===== Transition ===== */
+.transition-colors {
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+
+.transition-all-300 {
+  transition: all 0.3s ease;
+}
+
+/* ===== Ring / Focus ===== */
+.ring-vd-red {
+  outline: 2px solid rgba(225, 29, 46, 0.5);
+  outline-offset: 2px;
+}
+
+/* ===== Specific Component Helpers ===== */
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+/* ===== Form Overrides ===== */
+.form-control-dark {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: var(--vd-border);
+  color: #f4f4f5;
+}
+
+.form-control-dark::placeholder {
+  color: #71717a;
+}
+
+.form-control-dark:focus {
+  border-color: #dc2626;
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #f4f4f5;
+}
+
+/* ===== Bootstrap Override: Cards on dark ===== */
+.card {
+  --bs-card-bg: var(--vd-card);
+  --bs-card-border-color: var(--vd-border);
+}
+
+/* ===== Object Fit ===== */
+.object-contain {
+  object-fit: contain;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+/* ===== Aspect Ratio ===== */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+/* ===== Pointer Events ===== */
+.pointer-events-none {
+  pointer-events: none;
+}
+
+/* ===== Will Change ===== */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* ===== Snap Scroll ===== */
+.snap-start {
+  scroll-snap-align: start;
+}
+
+/* ===== Responsive Breakpoint Helpers ===== */
+@media (min-width: 768px) {
+  .md-gap-24 {
+    gap: 6rem !important;
+  }
+}
+
+/* ===== Hover Utilities ===== */
+.hover-text-white:hover {
+  color: #fff !important;
+}
+
+.hover-border-zinc-500:hover {
+  border-color: #71717a !important;
+}
+
+/* ===== Absolute positioning helpers ===== */
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
