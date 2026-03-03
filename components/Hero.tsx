@@ -13,7 +13,14 @@ export default function Hero() {
         <div className="d-flex flex-column gap-3">
           <h1 className="fw-semibold tracking-tight" style={{ fontSize: "clamp(1.875rem, 4vw, 3.75rem)" }}>
             {h.headline}{" "}
-            <span className="text-vd-red">{h.headlineHighlight}</span>
+            <span
+              className="text-white"
+              style={{
+                textShadow: "0 0 20px rgba(225,29,46,0.6), 0 0 40px rgba(225,29,46,0.3)",
+              }}
+            >
+              {h.headlineHighlight}
+            </span>
           </h1>
           <p className="max-w-xl fs-sm text-vd-muted">
             {h.subline}
@@ -38,13 +45,13 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="col-12 col-md-5">
+      <div className="col-12 col-md-5 d-none d-md-block">
         <img
           src="/VictoryDigitalLogo.png"
           alt="Victory Digital"
           width={500}
           height={500}
-          style={{ objectFit: "contain", maxHeight: 400 }}
+          style={{ objectFit: "contain", maxHeight: 400, width: "100%", height: "auto" }}
         />
       </div>
     </div>

@@ -32,6 +32,7 @@ body {
     "SF Pro Text", "SF Pro Display", "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -89,6 +90,16 @@ body {
 
 .animate-floaty {
   animation: floaty 6s ease-in-out infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ===== Scrollbar Hide ===== */
@@ -316,6 +327,14 @@ body {
 /* ===== Responsive Breakpoint Helpers ===== */
 @media (min-width: 768px) {
   .md-gap-24 {
+    gap: 6rem !important;
+  }
+
+  .gap-md-20 {
+    gap: 5rem !important;
+  }
+
+  .gap-md-24 {
     gap: 6rem !important;
   }
 }
