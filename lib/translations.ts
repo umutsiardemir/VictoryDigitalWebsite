@@ -263,9 +263,9 @@ export const translations = {
     },
     contact: {
       title: "İletişim",
-      description: "Ücretsiz ön analiz veya teklif için form veya WhatsApp.",
+      description: "Ücretsiz ön analiz veya teklif için form veya e-posta.",
       contactTitle: "İletişim Bilgileri",
-      location: "İzmir, Türkiye",
+      location: "Çanakkale, Türkiye",
       whatsapp: "WhatsApp'tan Yaz",
       formName: "Ad Soyad",
       formEmail: "E‑posta",
@@ -548,9 +548,9 @@ export const translations = {
     },
     contact: {
       title: "Contact",
-      description: "Free initial analysis or quote via form or WhatsApp.",
+      description: "Free initial analysis or quote via form or email.",
       contactTitle: "Contact Details",
-      location: "Izmir, Turkey",
+      location: "Çanakkale, Turkey",
       whatsapp: "Message on WhatsApp",
       formName: "Name",
       formEmail: "Email",

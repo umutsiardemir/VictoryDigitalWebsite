@@ -65,12 +65,6 @@ export default function Navbar() {
               EN
             </button>
           </div>
-          <a
-            href="tel:+447400487527"
-            className="d-inline-flex align-items-center rounded-pill bg-vd-red px-3 py-2 fs-xs fw-medium text-white text-decoration-none shadow-soft transition-colors bg-vd-red-hover"
-          >
-            +44 7400 487527
-          </a>
         </nav>
 
         <div className="d-flex d-md-none align-items-center gap-2">
@@ -107,12 +101,6 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <a
-              href="tel:+447400487527"
-              className="mt-2 d-inline-flex align-items-center justify-content-center rounded-pill bg-vd-red px-3 py-2 fs-xs fw-medium text-white text-decoration-none"
-            >
-              +44 7400 487527
-            </a>
           </nav>
         </div>
       )}

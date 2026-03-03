@@ -22,6 +22,11 @@ html {
 
 body {
   background-color: var(--vd-background);
+  background-image: url("/BackgroundImage.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #f4f4f5;
   font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
     "SF Pro Text", "SF Pro Display", "Segoe UI", sans-serif;

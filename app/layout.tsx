@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className="bg-vd-background" suppressHydrationWarning>
-      <body className={`${inter.variable} bg-vd-background`}>
+      <body className={`${inter.variable} bg-vd-background`} suppressHydrationWarning>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
