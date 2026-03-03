@@ -14,15 +14,15 @@ import ServiceRailCard from "@/components/ui/service-rail-card";
 import { useLanguage } from "@/context/LanguageContext";
 
 const CARD_META = [
-  { imageSrc: "/services/sosyal-medya.webp", icon: Share2, featured: false },
-  { imageSrc: "/services/lokal-seo.webp", icon: MapPin, featured: false },
-  { imageSrc: "/services/ai-otomasyon.webp", icon: Sparkles, featured: true },
-  { imageSrc: "/services/google-ads.webp", icon: MousePointerClick, featured: false },
-  { imageSrc: "/services/meta-ads.webp", icon: Megaphone, featured: false },
+  { imageKey: "social-media-management", icon: Share2, featured: false },
+  { imageKey: "local-seo", icon: MapPin, featured: false },
+  { imageKey: "ai-automations", icon: Sparkles, featured: true },
+  { imageKey: "google-ads", icon: MousePointerClick, featured: false },
+  { imageKey: "meta-ads", icon: Megaphone, featured: false },
 ];
 
 export default function ServicesRailSection() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const sr = t.servicesRail;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -152,7 +152,11 @@ export default function ServicesRailSection() {
             overflowY: "hidden",
           }}
         >
-          {sr.cards.map((card, i) => (
+          {sr.cards.map((card, i) => {
+            const meta = CARD_META[i];
+            const suffix = locale === "tr" ? "_tr" : "_en";
+            const imageSrc = `/${meta.imageKey}${suffix}.jpeg`;
+            return (
             <div
               key={card.title}
               className="shrink-0"
@@ -160,17 +164,18 @@ export default function ServicesRailSection() {
             >
               <ServiceRailCard
                 title={card.title}
-                imageSrc={CARD_META[i].imageSrc}
+                imageSrc={imageSrc}
                 imageAlt={card.title}
                 tags={[...card.tags] as [string, string, string]}
                 ctaLabel={sr.cta}
-                icon={CARD_META[i].icon}
-                featured={CARD_META[i].featured ? sr.featuredBadge : undefined}
+                icon={meta.icon}
+                featured={meta.featured ? sr.featuredBadge : undefined}
                 href="#iletisim"
                 style={{ height: 380, width: "min(400px, 85vw)" }}
               />
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
