@@ -44,8 +44,8 @@ export default function Navbar() {
               type="button"
               onClick={() => setLocale("tr")}
               className={`rounded-pill px-3 py-1 fs-xs fw-medium border-0 transition-colors ${locale === "tr"
-                  ? "bg-vd-red text-white"
-                  : "border border-vd-border text-vd-muted hover-text-white"
+                ? "bg-vd-red text-white"
+                : "border border-vd-border text-vd-muted hover-text-white"
                 }`}
               style={locale !== "tr" ? { border: "1px solid var(--vd-border)", background: "transparent" } : {}}
               aria-pressed={locale === "tr"}
@@ -56,8 +56,8 @@ export default function Navbar() {
               type="button"
               onClick={() => setLocale("en")}
               className={`rounded-pill px-3 py-1 fs-xs fw-medium border-0 transition-colors ${locale === "en"
-                  ? "bg-vd-red text-white"
-                  : "border border-vd-border text-vd-muted hover-text-white"
+                ? "bg-vd-red text-white"
+                : "border border-vd-border text-vd-muted hover-text-white"
                 }`}
               style={locale !== "en" ? { border: "1px solid var(--vd-border)", background: "transparent" } : {}}
               aria-pressed={locale === "en"}
